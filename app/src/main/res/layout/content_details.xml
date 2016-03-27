@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetailsActivity"
+    tools:showIn="@layout/activity_details">
+
+    <RelativeLayout
+        android:padding="@dimen/details_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details_image"/>
+
+        <TextView
+            android:paddingTop="@dimen/details_padding"
+            android:padding="@dimen/details_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release date"
+            android:layout_toRightOf="@+id/details_image"
+            android:id="@+id/details_release"/>
+
+        <TextView
+            android:padding="@dimen/details_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:layout_toRightOf="@+id/details_image"
+            android:layout_below="@+id/details_release"
+            android:id="@+id/details_rating"/>
+
+        <TextView
+            android:paddingTop="@dimen/details_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muuuuuuuuuvaaaaayyy"
+            android:layout_below="@+id/details_image"
+            android:id="@+id/details_overview"/>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
