@@ -112,14 +112,17 @@ public class MainActivity extends AppCompatActivity {
             for(int i = 0; i<results.length(); ++i) {
                 JSONObject object= results.getJSONObject(i);
                 String imagePath = object.get("poster_path").toString();
+                String headerImagePath = object.get("backdrop_path").toString();
                 PosterGridItem item = new PosterGridItem();
 
                 item.setImage(imageBase+imagePath+"&api_key="+KEY);
+                item.setHeaderImage(imageBase + headerImagePath + "&api_key=" + KEY);
                 item.setName(object.get("title").toString());
                 item.setRelease(object.get("release_date").toString());
                 item.setRating(object.get("vote_average").toString());
                 item.setOverview(object.get("overview").toString());
-                Log.d("DEBUG", "Image path:" + imageBase+imagePath+"&api_key="+KEY);
+                Log.d("DEBUG", "Image path:" + imageBase + imagePath + "&api_key=" + KEY);
+                Log.d("DEBUG", "HeaderImage path:" + imageBase+headerImagePath+"&api_key="+KEY);
                 gridData.add(item);
             }
 

@@ -84,6 +84,7 @@ public class PosterGridViewAdapter extends ArrayAdapter<PosterGridItem> /* BaseA
                 startDetailsActivity.putExtra("release", item.getRelease());
                 startDetailsActivity.putExtra("rating", item.getRating());
                 startDetailsActivity.putExtra("overview", item.getOverview());
+                startDetailsActivity.putExtra("headerImage", item.getHeaderImage());
                 context.startActivity(startDetailsActivity);
             }
         });
