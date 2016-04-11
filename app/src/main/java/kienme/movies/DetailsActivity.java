@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    String name, image, release, rating, overview;
+    String name, image, release, rating, overview, headerImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,17 +45,20 @@ public class DetailsActivity extends AppCompatActivity {
         release = data.getString("release");
         rating = data.getString("rating");
         overview = data.getString("overview");
+        headerImage = data.getString("headerImage");
     }
 
     private void setMovieData() {
         final CollapsingToolbarLayout layout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         ImageView imageView = (ImageView) findViewById(R.id.details_image);
+        ImageView headerImageView = (ImageView) findViewById(R.id.bgheader);
         TextView releaseView = (TextView) findViewById(R.id.details_release);
         TextView ratingView = (TextView) findViewById(R.id.details_rating);
         TextView overviewView = (TextView) findViewById(R.id.details_overview);
 
         layout.setTitle(name);
         Picasso.with(this).load(image).into(imageView);
+        Picasso.with(this).load(headerImage).into(headerImageView);
         releaseView.setText("Release date: " + release);
         ratingView.setText("Rating: " + rating + "/10");
         overviewView.setText(overview);

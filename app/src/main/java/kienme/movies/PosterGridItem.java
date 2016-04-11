@@ -8,7 +8,7 @@ package kienme.movies;
  */
 
 public class PosterGridItem {
-    private String name, image, release, rating, overview;
+    private String name, image, release, rating, overview, headerImage;
 
     public PosterGridItem() {
     }
@@ -25,6 +25,10 @@ public class PosterGridItem {
         return release;
     }
 
+    public String getHeaderImage() {
+        return headerImage;
+    }
+
     public String getRating() {
         return rating;
     }
@@ -39,6 +43,10 @@ public class PosterGridItem {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public void setHeaderImage(String headerImage) {
+        this.headerImage = headerImage;
     }
 
     public void setRelease(String release) {
